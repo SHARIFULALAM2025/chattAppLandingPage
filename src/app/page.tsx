@@ -1,5 +1,5 @@
 import HeroConversation from "@/components/HeroConversation";
-
+import { IoMdArrowForward } from 'react-icons/io'
 const STEPS = [
   {
     n: "01",
@@ -93,7 +93,7 @@ export default function Home() {
               className="focus-ring inline-flex items-center gap-2 rounded-full bg-signal text-ink font-semibold px-6 py-3 text-sm hover:bg-signal-dim hover:text-paper transition-colors"
             >
               Open the demo
-              <span aria-hidden>→</span>
+              <IoMdArrowForward aria-hidden="true" />
             </a>
             <a
               href="#how"
@@ -208,7 +208,8 @@ export default function Home() {
           className="focus-ring inline-flex items-center gap-2 rounded-full bg-signal text-ink font-semibold px-8 py-3.5 text-sm hover:bg-signal-dim hover:text-paper transition-colors"
         >
           Open the demo
-          <span aria-hidden>→</span>
+
+          <IoMdArrowForward aria-hidden="true" />
         </a>
       </section>
 
