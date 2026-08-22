@@ -29,7 +29,7 @@ A dark "dispatch / teleprinter" aesthetic — ink-navy background, a teal signal
 ## Getting Started
 
 ```bash
-git clone <your-landing-page-repo-url>
+git clone https://github.com/SHARIFULALAM2025/chattAppLandingPage.git
 cd landing-page
 npm install
 npm run dev
