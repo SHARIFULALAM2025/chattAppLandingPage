@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page
+
+The creative marketing/showcase page for **Wire**, a real-time 1-to-1 and group chat feature built for a take-home assignment. This is a standalone project — it does not share code with the chat app itself, only a visual identity and a link to it.
+
+**Live demo:** `<https://chatt-app-landing-page.vercel.app/>`
+**Chat app demo:** `<https://chat-app-phi-one-54.vercel.app/login>`
+**Chat app repository:** `<https://github.com/SHARIFULALAM2025/chatApp>` — full architecture notes, API documentation, and the Part 3 write-up live there.
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Animation | Framer Motion |
+| Fonts | JetBrains Mono (display) · Manrope (body), via `next/font/google` |
+
+---
+
+## Design Direction
+
+A dark "dispatch / teleprinter" aesthetic — ink-navy background, a teal signal accent, monospace display type — built around the idea of a message in transit rather than a generic SaaS template. The hero section features a looping, animated two-way conversation (typing indicators, timestamps, delivery ticks) instead of a static screenshot, so the page demonstrates the product's real-time behavior directly rather than describing it in prose.
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone <your-landing-page-repo-url>
+cd landing-page
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Runs at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx        # Font setup, metadata
+│   ├── page.tsx          # Full landing page content
+│   └── globals.css       # Design tokens (colors, fonts) as CSS variables
+└── components/
+    └── HeroConversation.tsx   # Animated hero conversation demo
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built for a take-home technical assessment. Not licensed for reuse.
