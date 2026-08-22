@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14161F;
+  --ink-raised: #1D212D;
+  --ink-line: #2A2F40;
+  --paper: #ECEDF1;
+  --paper-dim: #C9CDD8;
+  --signal: #37D6C4;
+  --signal-dim: #1F8F82;
+  --alert: #FF6B57;
+  --muted: #9AA1B2;
+  --font-display: var(--font-jetbrains-mono);
+  --font-body: var(--font-manrope);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-ink-line: var(--ink-line);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-signal: var(--signal);
+  --color-signal-dim: var(--signal-dim);
+  --color-alert: var(--alert);
+  --color-muted: var(--muted);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
