@@ -15,7 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Wire — real-time chat, no fuss",
+  title: "chat-app",
   description:
     "A messaging feature built for the take-home: phone-number login, direct and group threads, instant delivery.",
 };
