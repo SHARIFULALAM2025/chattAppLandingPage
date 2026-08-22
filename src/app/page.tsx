@@ -1,4 +1,6 @@
 import HeroConversation from "@/components/HeroConversation";
+import Image from "next/image";
+import Link from "next/link";
 import { IoMdArrowForward } from 'react-icons/io'
 const STEPS = [
   {
@@ -42,9 +44,14 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Nav */}
       <header className="mx-auto max-w-6xl px-6 sm:px-8 pt-7 flex items-center justify-between">
-        <div className="font-display font-extrabold tracking-tight text-lg">
-          WIRE<span className="text-signal">.</span>
-        </div>
+        <Link
+          href="https://chat-app-phi-one-54.vercel.app/login"
+          className="flex items-center gap-3"
+        >
+          <figure>
+            <Image src="/logo.png" alt="Wire Logo" width={20} height={20} />
+          </figure>
+        </Link>
         <nav className="flex items-center gap-6 text-sm text-muted">
           <a
             href="#how"
@@ -208,7 +215,6 @@ export default function Home() {
           className="focus-ring inline-flex items-center gap-2 rounded-full bg-signal text-ink font-semibold px-8 py-3.5 text-sm hover:bg-signal-dim hover:text-paper transition-colors"
         >
           Open the demo
-
           <IoMdArrowForward aria-hidden="true" />
         </a>
       </section>
